@@ -1,5 +1,4 @@
 # Understanding between the mutable and immutable objects in python
-from traceback import print_tb
 
 
 def get_largest_number(numbers,n):
@@ -93,3 +92,12 @@ for name, age, gender in combined:
     print(f"{name} is {age} years old and is {gender}")
 
 # The open function
+#The best practice while working with files is to use of the "with loop" for example below
+file = open("test.txt", "w")
+file.write("Hello pycharm, \nI'm Antony")
+with open("test.txt", "a") as file:
+    file.write(" and I love working with data")
+with open("test.txt", "r") as file:
+    text = file.read()
+    print(text)
+
