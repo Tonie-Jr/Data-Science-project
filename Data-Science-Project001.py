@@ -9,7 +9,8 @@ def get_largest_number(numbers,n):
 nums = [1, 3, 44, 2, 55, 445, 54, 323, 5433]
 
 print(nums)
-largest = get_largest_number(nums, 2)
+largest = get_largest_number(nums, 3)
+print(largest)
 print(nums)
 
 #Formating the print function using the sep argument
@@ -101,3 +102,10 @@ with open("test.txt", "r") as file:
     text = file.read()
     print(text)
 
+#factorail function
+def iterative_factorial(n):
+    fact = 1
+    for i in range(2, n+1):
+        fact *= i
+    return fact
+print(iterative_factorial(5))
