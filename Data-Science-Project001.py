@@ -102,15 +102,14 @@ with open("test.txt", "r") as file:
     text = file.read()
     print(text)
 
-#Simpel recursive Algorithms
-#example 1 factorial of a number
+#example 1 factorial of a number (iteration)
 def iterative_factorial(n):
     fact = 1
     for i in range(2, n+1):
         fact *= i
     return fact
 print(iterative_factorial(5))
-#Example 2 factorial of a number
+#Example 2 factorial of a number (Recursion)
 def recur_factorial(n):
     if n == 1:
         return 1
@@ -119,4 +118,36 @@ def recur_factorial(n):
         temp = temp * n
     return temp
 print(recur_factorial(6))
+
+#Recursive function that returns all the even numbers less or equal to 8
+def EvenNums(num):
+    print(num)
+    if num % 2 != 0:
+        print("Please enter an even number")
+    elif num == 2:
+        return num
+    else:
+        return EvenNums(num-2)
+print(EvenNums(9))
+print(EvenNums(8))
+
+#Fibonacci recursive function
+def Fibonacci(indx):
+    if indx <= 1:
+        return indx
+    else:
+        return Fibonacci(indx-1) + Fibonacci(indx-2)
+print(Fibonacci(8))
+
+#Fibonaccin iterative function
+def fibonacci(idx):
+    seq = [0,1]
+    for i in range(idx):
+        seq.append(seq[-1]+seq[-2])
+    return seq[-2]
+print(fibonacci(8))
+
+
+
+
 
