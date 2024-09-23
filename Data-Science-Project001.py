@@ -146,6 +146,18 @@ def fibonacci(idx):
         seq.append(seq[-1]+seq[-2])
     return seq[-2]
 print(fibonacci(88))
+# Permutation
+def permute(string, pocket=""):
+    if len(string) == 0:
+        print(pocket)
+    else:
+        for i in range(len(string)):
+            letter = string[i]
+            front = string[0:i]
+            back = string[i+1:]
+            together = front + back
+            permute(together, letter + pocket)
+print(permute("ABC", ""))
 
 
 
