@@ -145,7 +145,8 @@ def fibonacci(idx):
     for i in range(idx):
         seq.append(seq[-1]+seq[-2])
     return seq[-2]
-print(fibonacci(8))
+print(fibonacci(88))
+
 
 
 
